@@ -28,7 +28,6 @@ const Home = () => {
     setError(null);
 
     try {
-      // Inicializar mensagens
       const messages = [
         {
           role: "system",

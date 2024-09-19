@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import Groq from 'groq-sdk' // Certifique-se de que está importando do 'groq-sdk'
+import Groq from 'groq-sdk'
 
 interface GroqResponse {
     title: string
@@ -21,11 +21,11 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'API key not configured' }, { status: 500 })
         }
 
-        // Inicializar o cliente Groq conforme a documentação
+
         const groq = new Groq({ apiKey: GROQ_API_KEY })
 
         const payload = {
-            model: "llama-3.1-70b-versatile", // Verifique se este modelo está correto ou use "mixtral-8x7b-32768"
+            model: "llama-3.1-70b-versatile",
             messages,
             max_tokens,
             temperature: 0.2,
@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
         for (let attempt = 1; attempt <= maxRetries; attempt++) {
             try {
                 console.log(`Attempt ${attempt}: Sending request to Groq API`)
-                const response = await groq.chat.completions.create(payload) // Chamada correta do SDK
+                const response = await groq.chat.completions.create(payload)
 
                 console.log('Groq API response:', response)
 
@@ -67,7 +67,7 @@ export async function POST(request: NextRequest) {
                         )
                     }
                 }
-                await new Promise(resolve => setTimeout(resolve, 1000)) // Espera 1 segundo antes da próxima tentativa
+                await new Promise(resolve => setTimeout(resolve, 1000))
             }
         }
     } catch (error: any) {
