@@ -1,7 +1,4 @@
-
-Aqui está o novo README aprimorado, em inglês, com as informações que você mencionou:
-
-Next.js GROQ Project
+#Next.js GROQ Project#
 This project is a reimplementation of a Python repository into a Next.js application. The original repository, created by bklieger-groq, was written in Python, and I decided to rebuild it using Next.js.
 
 I welcome improvements and suggestions from the community!
@@ -50,4 +47,3 @@ The original Python repository can be found here. This project is a Next.js rewr
 
 Contributions
 I'm open to contributions and suggestions! Feel free to open issues or pull requests to help improve the project.
-
