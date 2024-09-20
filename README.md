@@ -42,9 +42,9 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the r
 
 You can start editing the page by modifying `app/page.tsx`. The page will auto-update as you make changes.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to optimize and load [Geist](https://vercel.com/font), a new font family by Vercel.
-
 ## Original Project
+
+This application is a reimagining of a clone of the new ChatGPT 01 - preview, which features a thought process for generating responses. The goal is to replicate this thought process and, using a GROQ API key, provide answers in the same manner as ChatGPT. The concept of this thought process aims to improve the quality of the responses.
 
 The original Python repository can be found [here](https://github.com/bklieger-groq/g1). This project is a Next.js rewrite of that codebase.
 
